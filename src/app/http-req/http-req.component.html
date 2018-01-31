@@ -1,0 +1,13 @@
+<p>
+  Http-req Exemplo works!
+</p>
+
+<input type="text"
+  (keydown.enter)="searchProjets()"
+  [(ngModel)]="searchField">
+
+  <ul>
+    <li *ngFor="let project of projects"> <!--mesmo que (project = 0; project <= project.length; project++), ou seja, um FOR-->
+         {{project.full_name}}
+    </li>
+  </ul>

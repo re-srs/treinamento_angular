@@ -1,0 +1,49 @@
+<p>
+  Meu Primeiro Formulário!!!
+</p>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+
+    <div class="form-group" [ngClass]="aplicarValidacaoCss(nome)">
+
+      <!-- [class.has-error]="nome.valid == false && nome.touched == true"
+      [class.has-success]="nome.valid == true && nome.touched == true"
+
+      pode ser feito de duas formas
+
+      [ngClass]="{'has-error': (nome.valid == false && nome.touched == true),
+                  'has-success': (nome.valid == true && nome.touched == true)}"  -->
+
+      <label class="control-label" for="nome">Nome</label>
+      <input required pattern="[a-z]+"
+             minlength="3" maxlength="6"
+             type="text" name="nome" value=""
+             class="form-control" #nome="ngModel"
+             [(ngModel)]="f.nome"> <!--validar campo-->
+
+
+             <!-- <div class="alert alert-danger" role="alert "
+              *ngIf="nome.valid == false && nome.touched == true" >
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                Nome inválido!
+             </div> -->
+
+      <app-tarefa-form-debug [mensagem]="['Nome invalido', 'Nome diferente']" [mostrarErro]="isError(nome)">
+
+      </app-tarefa-form-debug>
+
+     </div>
+
+    <div class="form-group" [ngClass]="aplicarValidacaoCss(email)">
+      <label class="control-label" for="email">Email</label>
+      <input required pattern="^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"
+             type="text" name="email" value=""
+             class="form-control" #email="ngModel"
+             [(ngModel)] = "f.email" [readonly]="nome.valid == false">
+    </div>
+
+    <input type="submit"class="btn-lg btn-primary" name="" value="Enviar" [disabled]="f.valid == false">
+
+  </form>
+
+  <!--<app-form-debug [formularioDebug]="f"></app-form-debug>-->

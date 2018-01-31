@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let c of clientes">
+    <a [routerLink]="['/cliente', c.id]">{{c.nome}}</a>
+  </li>
+</ul>
+
+<div class="">
+  <input type="button" class=" btn-primary" name="" value="Próxima Página" (click)="proximaPagina()">
+</div>
+
+Página:{{pagina}}

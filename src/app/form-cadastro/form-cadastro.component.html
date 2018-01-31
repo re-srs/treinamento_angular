@@ -1,0 +1,104 @@
+<h2 align="center">
+  Formulário de CEP
+</h2>
+<br>
+<br>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+
+
+  <div class="row">
+
+        <div class="col-md-3">
+          <div class="form-group">
+            <label class="control-label" for="cep">Cep</label>
+            <input required pattern="\d{5}-?\d{3}"
+                  minlength="3" maxlength="9"
+                  type="text" name="cep" value=""
+                  class="form-control" (blur)="consultarCEP(cep.value,f)"
+                  #cep           >
+
+                  <app-tarefa-form-debug
+                    [mensagem]="['Cep Invalido']"
+                    [mostrarErro]="isError(cep)">
+                  </app-tarefa-form-debug>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label" for="endereco">Endereço</label>
+            <input required pattern="[a-z]+"
+                  minlength="3" maxlength="40"
+                  type="text" name="endereco" ngModel #endereco
+                  class="form-control" #endereco >
+
+
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="form-group">
+            <label class="control-label" for="numero">Número</label>
+            <input required pattern="[0-9]"
+                   type="text" name="numero" value=""
+                   class="form-control" #numero >
+
+            <app-tarefa-form-debug
+              [mensagem]="['Número Invalido']"
+              [mostrarErro]="isError(numero)">
+            </app-tarefa-form-debug>
+
+          </div>
+        </div>
+</div>
+<div class="row">
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <label class="control-label" for="complemento">Complemento</label>
+            <input required pattern="[a-z]+"
+                  minlength="3" maxlength="8"
+                  type="text" name="complemento" value=""
+                  class="form-control" #complemento="ngModel"
+                  [(ngModel)]="f.complemento">
+
+                  <app-tarefa-form-debug
+                    [mensagem]="['Complemento Invalido']"
+                    [mostrarErro]="isError(complemento)">
+                  </app-tarefa-form-debug>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-group">
+            <label class="control-label" for="bairro">Bairro</label>
+            <input required pattern="[a-z]+"
+                  minlength="3" maxlength="40"
+                  type="text" name="bairro" value=""
+                  class="form-control" ngModel #bairro>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="form-group">
+            <label class="control-label" for="estado">Estado</label>
+            <input type="text" name="estado" value="" class="form-control" ngModel #estado>
+          </div>
+        </div>
+
+</div>
+
+<div class="row">
+        <div class="col-md-9">
+            <div class="form-group">
+              <label class="control-label" for="cidade">Cidade</label>
+              <input type="text" name="cidade" value="" class="form-control" ngModel #cidade>
+            </div>
+        </div>
+</div>
+   <br>
+   <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+
+</form>

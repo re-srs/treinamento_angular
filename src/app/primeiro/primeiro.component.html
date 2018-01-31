@@ -1,0 +1,17 @@
+<p>
+  primeiro works! : {{url}}
+</p>
+
+  <!--<img src ="{{urlImage}}" alt=""> -->
+
+  <img [src] ="urlImage" [alt]="url">
+
+
+
+
+<input type="button" (click)="clicar()" name="" value="Clique aqui"/>
+
+<!--<input type="text" name="" [value]="url"
+ (input) = "url=$event.target.value">-->
+
+ <input type="text" [(ngModel)]="url">

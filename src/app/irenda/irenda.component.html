@@ -1,0 +1,27 @@
+<p>
+  Imposto de renda works!
+</p>
+
+<br>
+<br>
+
+Salário:
+<input type="text" name="" [(ngModel)]="salario">
+
+<input type="button" name="" value="Calcular" (click)="calcularButton()">
+
+<br>
+<br>
+
+Nome: {{nome | pipeMinusculo}}
+
+<br>
+<br>
+
+
+Para o salário {{salario | currency:'BRL'}} o desconto de imposto de renda é {{calculo_ir | currency:'BRL'}} reais.
+
+<br>
+<br>
+<br>
+Data de Nascimento: {{data_nascimento | date: 'MM/dd/yyyy'}}

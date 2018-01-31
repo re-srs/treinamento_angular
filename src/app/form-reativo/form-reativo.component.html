@@ -1,0 +1,32 @@
+<p>
+  Formulário Reativo
+</p>
+
+<form [formGroup]="formComponent" (ngSubmit) = "onSubmit()">
+  <div class="form-group" [ngClass]="aplicarValidacaoCss('nome')">
+    <label for="nome" class="control-label">Nome</label>
+    <input type="text" formControlName="nome" class="form-control" value="">
+
+    <app-tarefa-form-debug
+        [mensagem] = "['Nome Invalido']"
+        [mostrarErro] = "isError('nome')">
+    </app-tarefa-form-debug>
+
+  </div>
+
+  <div class="form-group" [ngClass]="aplicarValidacaoCss('email')">
+    <label for="email" class="control-label">Email</label>
+    <input type="text" formControlName="email" class="form-control" value="">
+
+    <app-tarefa-form-debug
+        [mensagem] = "['Email Invalido']"
+        [mostrarErro] = "isError('email')">
+    </app-tarefa-form-debug>
+
+  </div>
+
+  <input type="submit" name="" value="Enviar" class=" btn-primary">
+  <input type="button"  value="CEP" (click)="consultarCEP()">
+
+  <app-form-debug [formularioDebug]="formComponent"></app-form-debug>
+</form>

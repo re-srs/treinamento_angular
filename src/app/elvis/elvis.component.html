@@ -1,0 +1,15 @@
+{{aluno.nome}}
+<br />
+Rua: {{aluno.cursos.professores.endereco.rua}}
+
+<br />
+Nota: {{aluno.nota != null ? aluno.nota.valor: 'a'}}
+
+Nota: {{aluno.nota?.valor}}   <!--operador ? substitui o if comparando se eh nulo, ele mesmo ja ve se é nulo,
+                                  se for nulo, aparece vazio e se não aparece o que vem depois do ponto-->
+<br  />
+
+INDRA
+<br/>
+
+{{indra.pais.nome_pais}}

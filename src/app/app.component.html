@@ -1,0 +1,127 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">INDRA</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active"><a routerLink="/http">Home/Http</a></li>
+      <li routerLinkActive="active"><a routerLink="/form">Meu Form</a></li>
+      <li routerLinkActive="active"><a routerLink="/irenda">Imposto de Renda</a></li>
+      <li routerLinkActive="active"><a routerLink="/imc">Imc</a></li>
+      <li routerLinkActive="active"><a routerLink="/clientes"[queryParams]="{pagina: 1}" >Cliente</a></li>
+      <!-- <li routerLinkActive="active"><a [routerLink]="['/cliente',idClienteForm.value]">Cliente com ID</a></li> -->
+      <!-- <li routerLinkActive="active"><a routerLink="/form-cadastro">CEP</a></li> -->
+      <li routerLinkActive="active"><a routerLink="aluno">Alunos</a></li>
+      <li routerLinkActive="active"><a routerLink="/form-reativo">Form Reativo</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<!--<app-imc></app-imc>--><!--The content below is only a placeholder and can be replaced.-->
+<!--<app-irenda></app-irenda> -->
+<!--<app-input-output  (meuclique)= "clicar($event)" (meumostre)= "mostrar($event)"
+endereco="Av Guido Caloi">
+</app-input-output>
+-->
+<!--<app-diretivas-cor></app-diretivas-cor>-->
+
+<!--<app-ng-content>
+  <div class="header">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                  <img src="./assets/img/favicon.ico" alt="Brand">
+                </a>
+            </div>
+        </div>
+    </nav>
+  </div>
+
+
+
+  <div class="meuOutroConteudo">
+    <p>Renata Lobato Outro Conteudo!</p>
+  </div>
+
+  <div class="meuConteudo">
+    <p>Renata Lobato Conteudo</p>
+</div>
+
+
+<div class="footer">
+
+  <ul>
+    <li>Link 1</li>
+    <li>Link 2</li>
+  </ul>
+  <p>By Renata Lobato</p>
+</div>
+</app-ng-content>-->
+<!--<app-segundo></app-segundo>-->
+<!-- <app-cliente></app-cliente> -->
+<!--<alert type="success">hello</alert>-->
+<!--<app-crenata></app-crenata>-->
+<!--<app-http-req></app-http-req>-->
+<br>
+<br>
+<div class="container">
+    <router-outlet></router-outlet>
+    <!-- <form #meuForm="ngForm">
+        <label for="idCliente">Número Cliente</label>
+        <input type="text" name="idClienteForm" ngModel class="form-control" #idClienteForm>
+         <label for="idEmpresa">Número Empresa</label>
+          <input type="text" name="idEmpresa" ngModel class="form-control" #idEmpresa>
+    </form> -->
+</div>
+<!-- <app-meuform></app-meuform> -->
+
+<!-- <app-form-cadastro></app-form-cadastro> -->
+
+<!-- <app-diretivas-class-style></app-diretivas-class-style> -->
+<!--<app-elvis></app-elvis>-->
+<!-- inicio cliente detalhe <footer>
+    <ul>
+      <li><a routerLink="#">Sobre o autor</a></li>
+      <li><a routerLink="#">Mapa do site</a></li>
+      <li><a routerLink="#">Entre em contato</a></li>
+    </ul>
+</footer>  fim cliente detalhe-->
+
+<!--inciio
+<input type="button" (click)="destruirCicloClick()" name="" value="Destruir">
+fim-->
+
+<!--<app-ciclo *ngIf="!destruirCiclo"  [contador]="numero" nome="Renata Lobato">
+
+</app-ciclo>-->
+<!-- Numero: {{numero}}
+
+<br>
+
+<input (click)="somaMaisUm()" type="button" name="" value="Somar">
+<br>
+<br>  -->
+
+<!--
+
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul>-->
